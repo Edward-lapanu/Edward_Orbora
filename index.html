@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Survey Form</title>
+        <style>
+            body {
+        background-color: lavender;
+            font-family: Arial, sans-serif;
+            font-size: 70%;
+            color: #fff;
+        }
+
+        h1 {
+            background-color: #252042;
+            color: #fff;
+            text-align: center;
+            padding: 8px;
+            margin: 20px 0;   
+        }
+
+    
+
+        .container {
+            width: 80%;
+            max-width: 700px;
+            margin: 0 auto;
+            background-color:  rgb(27, 47, 78);
+            padding: 24px;
+            border: 5px;
+            border-radius: 5px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        input[type="text"],
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin: 5px 0;
+            cursor: pointer;
+        
+        
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        textarea {
+            padding-bottom: 2px;
+            text-align: center;
+            
+        }
+
+        
+        </style>
+
+    </head>
+<body>
+    
+        
+    <div class="container">
+    <form action="submit.php" method="post">
+    <section>
+        <h1>Survey form</h1>
+        <h2>Background Information:</h2>
+        <label for="fname">Enter your first name:<br><input type="text" id="fname" required></label>
+        <label for="lastname">Enter your last name:<br><input type="text" id="lastname" required></label>
+        <label for="email">Enter your email:<br><input type="text" id="email" name="email" required></label>
+    <div>Choose your gender:
+        <label for="male"> <input type="radio" id="male" name="male-female type" small>Male</label>
+        <label for="female"><input type="radio" id="female" name="male-female type" small>Female</label>        
+    </div>
+    <label for="education">What is your education Level:
+    <select id="education">
+        <option value="">select</option>
+        <option value="1">Craft</option>
+        <option value="2">Diploma</option>
+        <option value="3">Degree</option>
+        <option value="4">Other</option>
+    </select>
+    </label>
+    <label for="experience">How many years of experience do you have in web development?
+    <select id="experience">
+        <option value="">Less than 1 year</option>
+        <option value="1">1-3 years</option>
+        <option value="2"> 4-6 years</option>
+        <option value="3">7+ years</option>
+
+    </select>
+</label>
+    </section>
+    <section>
+        <h2>Web Development Tools and Technologies:</h2>
+        <div>Which programming languages do you primarily use for web development? (Select all that apply):
+        <label for="html/css"><input type="checkbox" id="html/css" name="html/css" small>html/css</label>
+        <label for="javascript"><input type="checkbox" id="javascript" name="javascript" small>javascript</label>
+        <label for="python"><input type="checkbox" id="python" name="python" small>python</label>
+        <label for="PHP"><input type="checkbox" id="PHP" name="PHP" small>PHP</label>
+        <label for="ruby"><input type="checkbox" id="ruby" name="ruby" small>ruby</label>
+        <label for="C#"><input type="checkbox" id="C#" name="C#" small>C#</label>
+        </div>
+    <div>What web development frameworks or libraries do you frequently use?<br>
+        <label for="React"><input type="checkbox" id="React" name="React">React</label>
+        <label for="Angular"><input type="checkbox" id="Angular" name="Angular">Angular</label>
+        <label for="vue.js"><input type="checkbox" id="Vue.js">Vue.js</label>
+        <label for="Express.js"><input type="checkbox" id="Express.js" name="Express.js">Express.js</label>
+        <label for="django"><input type="checkbox" id="django" name="django">django</label>
+        <label for="other">other(Please specify):<i3put type="text" id="other" name="other"></label>
+
+        </div>
+    <div>Which development environments do you prefer for web development?<br>
+        <label for="visual Studio Code"><input type="checkbox" id="visual Studio Code" name="Visual Studio Code">Visual Studio Code</label>
+        <label for="sublime"><input type="checkbox" id="sublime" name="Sublime">Sublime text</label>
+        <label for="IntelliJ"><input type="checkbox" id="IntelliJ" name="IntelliJ">IntelliJ IDEA</label>
+        <label for="atom"><input type="checkbox" id="atom" name="Atom">Atom</label>
+        <label for="other">Other(specify):<input type="text" id="other" name="other"></label>
+
+
+    </div>
+
+    </section>
+    <section>
+        <h2>Web Development Trends and Challenges:</h2>
+        <div>How important is responsive web design in your projects?<br>
+          <label for="important"><input type="radio" id="important" name="important type" small>Extreamly important.</label>
+          <label for="important"><input type="radio" id="important" name="important type" small>Important</label>
+          <label for="important"><input type="radio" id="important" name="important type" small>Somewhat important.</label>
+          <label for="important"><input type="radio" id="important" name="important type" small>Not important.</label>
+        </div>
+        <div> What are the most significant security challenges you face in web development?<br>
+            <label for="xss"><input type="checkbox" id="xss" name="xss">Cross-site scripting(XSS).</label>
+            <label for="sql"><input type="checkbox" id="sql" name="sql">SQL Injection.<label>
+            <label for="csrf"><input type="checkbox" id="csrf" name="csrf">Cross=site-request forgery.</label>
+            <label for="Authentication"><input type="checkbox" id="Authentication" name="Authentication">Authentication and Authorization.</label>
+            <label for="other">Other(specify)<input type="text" id="other" name="other"><label>
+
+            </div> 
+        <Label for="Trends"> Are you exploring or using any emerging technologies like Progressive Web Apps (PWAs), WebAssembly, or WebVR/AR in your web development projects?
+            <select name="Trends" id="Trends">
+                <option value="">Yes</option>
+                <option value="1">No</option>
+                <option value="2">not sure</option>
+
+            </select>
+
+        </Label>
+    </section>
+    <label for="comment">why do you love web development?<textarea id="comment" name="comment" rows="2" cols="30" placeholder="optional"></textarea></label>
+    <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>
